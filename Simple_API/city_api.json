@@ -1,0 +1,39 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "population": "12,442,373",
+      "is_metro": true
+    },
+    {
+      "id": 2,
+      "name": "Delhi",
+      "state": "Delhi",
+      "population": "11,034,555",
+      "is_metro": true
+    },
+    {
+      "id": 3,
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "population": "8,443,675",
+      "is_metro": true
+    },
+    {
+      "id": 4,
+      "name": "Ahmedabad",
+      "state": "Gujarat",
+      "population": "5,577,940",
+      "is_metro": false
+    },
+    {
+      "id": 5,
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "population": "6,731,790",
+      "is_metro": true
+    }
+  ]
+}
