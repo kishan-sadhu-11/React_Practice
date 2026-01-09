@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------------------------------------------
+------------------------------------  PROPS  -----------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+props = props matlab ye ak parent file ka data child me return karta he
+ex:
+---> app.jxs  = aapne isme
+<First
+name : kishan
+/>
+
+--->one.jsx
+//name jo app.jsx me he vo one.jsx me return karega
+<p>{this.props.name}</p>
+
+
+
+--------------------------------------------------------------------------------------------------------------
+------------------------------------  CONDITION RENDERING  -----------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+
+=>MATLAB AGAR TOOGLE BUTTTON BAYA HE TO USME JAB CLICK HO TABHI MUJE VO CONTENT DIKHE
+
+EX:
+======
+ toggle = (index) => {
+        let tmp = [...this.state.array]
+        tmp[index].show = !tmp[index].show
+
+        this.setState({array : tmp })
+
+    };
+
+
+======
+ {name.show && "Last value " + name.last}
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+------------------------------------  SOME BASIC THIGS  -----------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+1).map method to print somthing in to url
+->its perform action on each elements
+
+2).spread opretor = to make a new arry and add value into array line by line
+
+
+3).filter function to filter element
+
+
+
