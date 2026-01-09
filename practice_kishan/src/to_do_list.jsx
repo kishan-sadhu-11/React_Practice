@@ -20,9 +20,13 @@ class First extends Component{
     };
 
     Add = () =>{
+        if(this.state.lname == "" && this.state.fname == "" ) return alert("enter all required field")
         this.setState({
-            array : [...this.state.array,{first : this.state.fname,last : this.state.lname}]
+            array : [...this.state.array,{first : this.state.fname,last : this.state.lname,show:false}]
         })
+
+        this.state.fname =""
+        this.state.lname =""
     }
 
     delele = (curindex) =>{
@@ -30,6 +34,15 @@ class First extends Component{
             array : this.state.array.filter((name,index) => index !== curindex)
         })
     }
+
+    toggle = (index) => {
+        let tmp = [...this.state.array]
+        tmp[index].show = !tmp[index].show
+
+        this.setState({array : tmp })
+
+    };
+
 
     render(){
         const {array,fname,lname} = this.state;
@@ -43,7 +56,14 @@ class First extends Component{
                 {/* here print all values */}
                 {
                     array.map((name,index) => (
-                        <p key={index}>your fname {name.first}  &nbsp;   <button onClick={() => this.delele(index)}>delete</button>   </p>
+                        <p key={index}>your fname {name.first}  &nbsp;
+
+                        <button onClick={() => this.toggle(index)}>View</button>
+                        <button onClick={() => this.delele(index)}>Delete</button>  <br/>
+
+                         {/* value.show = agar click and last value enter he tabhi dikhega ye niche vala */}
+                        {name.show && "Last value " + name.last}
+                        </p>
                     ))
                 }
             </>
