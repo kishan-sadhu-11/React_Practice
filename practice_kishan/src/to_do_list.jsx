@@ -19,6 +19,7 @@ class First extends Component{
         this.setState({lname : e.target.value})
     };
 
+
     Add = () =>{
         if(this.state.lname == "" && this.state.fname == "" ) return alert("enter all required field")
         this.setState({
@@ -29,11 +30,13 @@ class First extends Component{
         this.state.lname =""
     }
 
+
     delele = (curindex) =>{
         this.setState({
             array : this.state.array.filter((name,index) => index !== curindex)
         })
     }
+
 
     toggle = (index) => {
         let tmp = [...this.state.array]
@@ -72,3 +75,6 @@ class First extends Component{
 }
 
 export default First;
+
+
+
