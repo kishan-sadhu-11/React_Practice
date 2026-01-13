@@ -13,11 +13,19 @@
 
 
 
+// import Cal from './today_12_1_2026/cal';
 
+
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
+
+// // Aapke Components
 // import First from './to_do_list';
+// import Basic from './1basic_of_react/one';
 
-import Cal from './today_12_1_2026/cal';
+import Form from './today_13_1_2026/multi_part_form';
 
+// import MultiPart from "./today_13_1_2026/new_multi_part";
 
 
 function App() {
@@ -53,8 +61,37 @@ function App() {
 
       {/* <ContactList /> */}
 
-      <Cal/>
 
+
+    {/* <Router>
+        <div>
+          <nav>
+            <ul>
+
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+
+              <li>
+                <Link to="/to_do_list">About</Link>
+              </li>
+
+            </ul>
+          </nav>
+
+          <Routes>
+
+            <Route path="/" element={<Basic />} />
+
+            <Route path="/to_do_list" element={<First />} />
+
+          </Routes>
+        </div>
+    </Router> */}
+
+    <Form/>
+
+    {/* <MultiPart/> */}
 
 
     </>
