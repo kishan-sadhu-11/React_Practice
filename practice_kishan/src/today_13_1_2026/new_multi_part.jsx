@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-class MultiPart extends Component {
+import React, { Component } from 'react';
+class First extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,123 +9,132 @@ class MultiPart extends Component {
       t4: "",
       t5: "",
       t6: "",
-      t7: "",
-      t8: "",
-      t9: "",
       index: 0,
-    };
+      part: ""
+    }
   }
-  onclicknext = () => {
-    this.setState((prevState) => ({
-      index: prevState.index + 1,
-    }));
-  };
-  onclickprevious = () => {
-    this.setState((prevState) => ({
-      index: prevState.index - 1,
-    }));
-  };
+
+
+
+  onnext = () => {
+    if (this.state.index == 2) {
+      this.setState({ index: 2 })
+
+    }
+    else {
+      this.setState({ index: this.state.index + 1 })
+    }
+
+  }
+
+  onprev = () => {
+    if (this.state.index == 0) {
+      this.setState({ index: 0 })
+
+    }
+    else {
+      this.setState({ index: this.state.index - 1 })
+    }
+  }
+
   render() {
-    const { t1, t2, t3, t4, t5, t6, t7, t8, t9, index } = this.state;
+    const { t1, t2, t3, t4, t5, t6, index } = this.state;
     return (
-      <div>
-        <div style={{ display: index === 0 ? "" : "none" }}>
-          <h1>Part1</h1>
-          <input
-            type="text"
-            value={t1}
-            placeholder="First Name"
-            onChange={(e) => this.setState({ t1: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t2}
-            placeholder="Last Name"
-            onChange={(e) => this.setState({ t2: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t3}
-            placeholder="Mobile Number"
-            onChange={(e) => this.setState({ t3: e.target.value })}
-          />
-          <br />
+      <>
+        <div style={{
+          display: index == 0 ? "block" : "none"
+        }}>
+          <h1>part 1</h1>
+          <input type="text" onChange={
+            (e) => {
+              this.setState({
+                t1: e.target.value
+              })
+            }
+          } value={t1} /><br />
+          <input type="text" onChange={
+            (e) => {
+              this.setState({
+                t2: e.target.value
+              })
+            }
+          } value={t2} />
         </div>
-        <div style={{ display: index === 1 ? "" : "none" }}>
-          <h1>Part2</h1>
-          <input
-            type="text"
-            value={t4}
-            placeholder="First Name"
-            onChange={(e) => this.setState({ t4: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t5}
-            placeholder="Last Name"
-            onChange={(e) => this.setState({ t5: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t6}
-            placeholder="Mobile Number"
-            onChange={(e) => this.setState({ t6: e.target.value })}
-          />
-          <br />
+
+
+        <div style={{
+          display: index == 1 ? "block" : "none"
+        }}>
+
+          <h1>part 2</h1>
+          ce<input type="checkbox" onChange={(e) => {
+            this.setState({
+              t3: e.target.value
+            })
+          }} value="ce" checked={t3 == "ce"} />
+          it<input type="checkbox" onChange={
+            (e) => {
+              this.setState({
+                t3: e.target.value
+              })
+            }
+          } value="it" checked={t3 == "it"} /><br />
+          <input type="text" onChange={(e) => {
+            this.setState({
+              t4: e.target.value
+            })
+          }} value={t4} />
         </div>
-        <div style={{ display: index === 2 ? "" : "none" }}>
-          <h1>Part3</h1>
-          <input
-            type="text"
-            value={t7}
-            placeholder="First Name"
-            onChange={(e) => this.setState({ t7: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t8}
-            placeholder="Last Name"
-            onChange={(e) => this.setState({ t8: e.target.value })}
-          />
-          <br />
-          <input
-            type="text"
-            value={t9}
-            placeholder="Mobile Number"
-            onChange={(e) => this.setState({ t9: e.target.value })}
-          />
-          <br />
+
+
+        <div style={{
+          display: index == 2 ? "block" : "none"
+        }}>
+          <h1>part 3</h1>
+          male<input type="radio" onChange={
+            (e) => {
+              this.setState({
+                t5: e.target.value
+              })
+            }
+          } value="male" checked={t5 === "male"} />
+          female<input type="radio" onChange={
+            (e) => {
+              this.setState({
+                t5: e.target.value
+              })
+            }
+          } value="female" checked={t5 === "female"} /><br />
+          <input type="text" onChange={
+            (e) => {
+              this.setState({
+                t6: e.target.value
+              })
+            }
+          } value={t6} />
+
         </div>
+        <br />
+
+
+        <button onClick={this.onnext}>Next</button> &nbsp; <button onClick={this.onprev}>Previous</button><br></br>
+
+
         <div>
-          <button disabled={index === 2} onClick={this.onclicknext}>
-            Next
-          </button>
-          <button disabled={index === 0} onClick={this.onclickprevious}>
-            Previous
-          </button>
+          t1 : {t1} <br />
+          t2 : {t2}<br />
+          t3 : {t3}<br />
+          t4 : {t4}<br />
+          t5 : {t5}<br />
+          t6 : {t6}<br />
         </div>
-        <div>
-          <div>{t1}</div>
-          <div>{t2}</div>
-          <div>{t3}</div>
-        </div>
-        <div>
-          <div>{t4}</div>
-          <div>{t5}</div>
-          <div>{t6}</div>
-        </div>
-        <div>
-          <div>{t7}</div>
-          <div>{t8}</div>
-          <div>{t9}</div>
-        </div>
-      </div>
+
+
+
+
+      </>
     );
+
   }
 }
-export default MultiPart;
+export default First;

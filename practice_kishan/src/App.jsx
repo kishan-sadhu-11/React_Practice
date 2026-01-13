@@ -23,9 +23,9 @@
 // import First from './to_do_list';
 // import Basic from './1basic_of_react/one';
 
-import Form from './today_13_1_2026/multi_part_form';
+// import Form from './today_13_1_2026/multi_part_form';
 
-// import MultiPart from "./today_13_1_2026/new_multi_part";
+import First from "./today_13_1_2026/new_multi_part";
 
 
 function App() {
@@ -89,7 +89,7 @@ function App() {
         </div>
     </Router> */}
 
-    <Form/>
+    <First/>
 
     {/* <MultiPart/> */}
 
