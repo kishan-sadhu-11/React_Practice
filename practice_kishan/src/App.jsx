@@ -1,3 +1,4 @@
+// import PropTypes from 'prop-types';
 // import Classbase_imlementation from './module/classbase_imlementation';
 
 //for the propes we need to import classname of the file
@@ -25,7 +26,11 @@
 
 // import Form from './today_13_1_2026/multi_part_form';
 
-import First from "./today_13_1_2026/new_multi_part";
+// import First from "./today_13_1_2026/new_multi_part";
+
+
+import First from './test';
+
 
 
 function App() {
@@ -89,13 +94,18 @@ function App() {
         </div>
     </Router> */}
 
-    <First/>
+    {/* <Basic/> */}
 
     {/* <MultiPart/> */}
+
+    <First />
+
+
 
 
     </>
   )
 }
+
 
 export default App

@@ -1,0 +1,84 @@
+1). npm init -y
+
+
+2).now create one index.js file
+and type node-express
+
+
+3).inside the index.js ad one more line
+app.post('/', (req, res) => res.send('kishan sadhu'))
+
+
+4).now go to terminal and run the npm run
+
+
+5).now go to tunder client and type
+GET/POST  = http://localhost:3000/pass_variable
+
+6).
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+1).react  = react is libary of javascript
+
+->its not framwork but [ANGULER JS IS FRAMWORK]
+
+
+2).node js = ✅ JavaScript runtime environment
+
+
+3).express js = its framwork to making api and start communication between client and server using api
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+🔹 Simplified Flow
+REACT VITA = TO CREATE WEBSITE
+
+NODE JS = MEANS VO SERVER KO RUN KARNE KE LIYE USE HOTA HE
+
+EXPRESS JS = YE API BANATA HE JOSON DATA KA JO REACT SE AATA HE , AND DATABSE ME STORE KARNE KE LIYE BHI HOTA HE
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+********* API = A way to exchange JSON/data between frontend and backend
+
+Kaam:
+
+REACT SE JSON DATA RECIVEKARNA -> JSON DATA KO DATABASE ME STORE KARNA -> USI DATA KO REACT FRUNTEND ME DIKHNE KE LIYE HOTA HE
+
+
+
+********* SERVER = MEANS API SERVER PE CALL HOTI HE VO API KI RESPOCE AND REQUSTE KO HANDLE KAARTA HE
+
