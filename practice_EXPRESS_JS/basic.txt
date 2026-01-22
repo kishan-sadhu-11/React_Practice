@@ -1,0 +1,18 @@
+1).npm init -y
+
+2).npm install express --save
+
+
+3).pacage.json me scripts me ye enter karo
+"start": "node index.js"
+
+
+4).npm install nodemon
+=>jisse bar bar server restart nahi karna padta
+
+
+=>    npm start (to run node js server)
+
+=>nodejs = its used to run the js in bakend and run the server
+
+=>express js = its get api and post api and
